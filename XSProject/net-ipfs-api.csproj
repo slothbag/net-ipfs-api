@@ -6,7 +6,7 @@
     <ProjectGuid>{26DCDA2C-1E2C-4EF9-A793-32114FDA657F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>netipfsapi</RootNamespace>
-    <AssemblyName>net-ipfs-api</AssemblyName>
+    <AssemblyName>Ipfs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -20,7 +20,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -209,9 +208,6 @@
   <ItemGroup>
     <None Include="..\src\Ipfs\Ipfs.csproj">
       <Link>Ipfs.csproj</Link>
-    </None>
-    <None Include="..\src\Ipfs\packages.config">
-      <Link>packages.config</Link>
     </None>
     <None Include="..\src\Ipfs\bin\Debug\Ipfs.dll">
       <Link>bin\Debug\Ipfs.dll</Link>
