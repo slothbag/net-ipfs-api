@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26DCDA2C-1E2C-4EF9-A793-32114FDA657F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>netipfsapi</RootNamespace>
+    <AssemblyName>net-ipfs-api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Ipfs\Base58.cs">
+      <Link>Base58.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsBitSwapStat.cs">
+      <Link>IpfsBitSwapStat.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsClient.cs">
+      <Link>IpfsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsCommand.cs">
+      <Link>IpfsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsEncoding.cs">
+      <Link>IpfsEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsException.cs">
+      <Link>IpfsException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsID.cs">
+      <Link>IpfsID.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsLogLevel.cs">
+      <Link>IpfsLogLevel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsNamePublish.cs">
+      <Link>IpfsNamePublish.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsObjectLinks.cs">
+      <Link>IpfsObjectLinks.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsObjectStat.cs">
+      <Link>IpfsObjectStat.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsPeer.cs">
+      <Link>IpfsPeer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsPeerConnectionStatus.cs">
+      <Link>IpfsPeerConnectionStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsPingResult.cs">
+      <Link>IpfsPingResult.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsStream.cs">
+      <Link>IpfsStream.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsType.cs">
+      <Link>IpfsType.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\IpfsVis.cs">
+      <Link>IpfsVis.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\MerkleNode.cs">
+      <Link>MerkleNode.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\MultiAddress.cs">
+      <Link>MultiAddress.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\MultiHash.cs">
+      <Link>MultiHash.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsBitSwap.cs">
+      <Link>Commands\IpfsBitSwap.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsBlock.cs">
+      <Link>Commands\IpfsBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsBootstrap.cs">
+      <Link>Commands\IpfsBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsConfig.cs">
+      <Link>Commands\IpfsConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsDht.cs">
+      <Link>Commands\IpfsDht.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsDiag.cs">
+      <Link>Commands\IpfsDiag.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsFile.cs">
+      <Link>Commands\IpfsFile.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsLog.cs">
+      <Link>Commands\IpfsLog.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsName.cs">
+      <Link>Commands\IpfsName.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsObject.cs">
+      <Link>Commands\IpfsObject.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsPin.cs">
+      <Link>Commands\IpfsPin.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsRefs.cs">
+      <Link>Commands\IpfsRefs.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsRepo.cs">
+      <Link>Commands\IpfsRepo.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsRoot.cs">
+      <Link>Commands\IpfsRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsStats.cs">
+      <Link>Commands\IpfsStats.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsSwarm.cs">
+      <Link>Commands\IpfsSwarm.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsTar.cs">
+      <Link>Commands\IpfsTar.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Commands\IpfsTour.cs">
+      <Link>Commands\IpfsTour.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IJsonSerializer.cs">
+      <Link>Json\IJsonSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsAdd.cs">
+      <Link>Json\IpfsAdd.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsBitSwapStat.cs">
+      <Link>Json\IpfsBitSwapStat.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsCommand.cs">
+      <Link>Json\IpfsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsConfigShow.cs">
+      <Link>Json\IpfsConfigShow.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsId.cs">
+      <Link>Json\IpfsId.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsNamePublish.cs">
+      <Link>Json\IpfsNamePublish.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsNameResolve.cs">
+      <Link>Json\IpfsNameResolve.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsObjectLinks.cs">
+      <Link>Json\IpfsObjectLinks.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsObjectStat.cs">
+      <Link>Json\IpfsObjectStat.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsStatsBw.cs">
+      <Link>Json\IpfsStatsBw.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\IpfsVersion.cs">
+      <Link>Json\IpfsVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\JsonSerializer.cs">
+      <Link>Json\JsonSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\MerkleNodeConverter.cs">
+      <Link>Json\MerkleNodeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Json\MultiHashConverter.cs">
+      <Link>Json\MultiHashConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Ipfs\Utilities\UriHelper.cs">
+      <Link>Utilities\UriHelper.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\Ipfs\Ipfs.csproj">
+      <Link>Ipfs.csproj</Link>
+    </None>
+    <None Include="..\src\Ipfs\packages.config">
+      <Link>packages.config</Link>
+    </None>
+    <None Include="..\src\Ipfs\bin\Debug\Ipfs.dll">
+      <Link>bin\Debug\Ipfs.dll</Link>
+    </None>
+    <None Include="..\src\Ipfs\bin\Debug\Ipfs.pdb">
+      <Link>bin\Debug\Ipfs.pdb</Link>
+    </None>
+    <None Include="..\src\Ipfs\bin\Debug\Newtonsoft.Json.dll">
+      <Link>bin\Debug\Newtonsoft.Json.dll</Link>
+    </None>
+    <None Include="..\src\Ipfs\bin\Release\Ipfs.dll">
+      <Link>bin\Release\Ipfs.dll</Link>
+    </None>
+    <None Include="..\src\Ipfs\bin\Release\Ipfs.pdb">
+      <Link>bin\Release\Ipfs.pdb</Link>
+    </None>
+    <None Include="..\src\Ipfs\bin\Release\Newtonsoft.Json.dll">
+      <Link>bin\Release\Newtonsoft.Json.dll</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
